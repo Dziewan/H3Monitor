@@ -1,0 +1,66 @@
+PUT http://34.116.140.204:8080/history/statistics
+Content-Type: application/json
+
+{
+  "playerOneSetPoints": 1,
+  "playerOneMatchPoints": 1,
+  "playerTwoSetPoints": 4,
+  "playerTwoMatchPoints": 1
+}
+
+###
+
+PUT http://34.116.140.204:8080/history/match
+Content-Type: application/json
+
+{
+  "matchDateTime": "2023-08-14 9:48:00",
+  "updatedMatch": {
+    "playerOne": {
+      "name": "Michal",
+      "fraction": "DUNGEON",
+      "hero": "LORELEI",
+      "win": false,
+      "color": "RED",
+      "details": "Wyjebka"
+    },
+    "playerTwo": {
+      "name": "Daniel",
+      "fraction": "FORTRESS",
+      "hero": "GERWULF",
+      "color": "BLUE",
+      "win": true,
+      "details": "Wyjebka Michala"
+    },
+    "onGoing": false,
+    "season": 6,
+    "dateTime": "2023-08-16 10:49:00"
+  }
+}
+
+###
+
+POST http://34.116.140.204:8080/history/match
+Content-Type: application/json
+
+{
+  "playerOne": {
+    "name": "Michal",
+    "fraction": "COVE",
+    "hero": "CASSIO",
+    "win": true,
+    "color": "RED",
+    "details": "Walka"
+  },
+  "playerTwo": {
+    "name": "Daniel",
+    "fraction": "NECROPOLIS",
+    "hero": "THANT",
+    "color": "BLUE",
+    "win": false,
+    "details": "Walka"
+  },
+  "onGoing": false,
+  "season": 6,
+  "dateTime": "2023-08-16 14:04:00"
+}
